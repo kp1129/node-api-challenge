@@ -55,5 +55,12 @@ router.put("/:id", (req, res) => {
     }    
 });
 
+// Endpoint for Project Actions
+router.get("/:id/actions", (req, res) => {
+    // get all the project actions for the project with this id
+    Project.getProjectActions(req.params.id)
+    .then(response => res.status(200).json(response))
+    .catch(error => res.status(500).json({ message: "Oops! Could not retrieve project actions"}))
+});
 
 module.exports = router;

@@ -38,15 +38,25 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [ x ] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+I learned how I can use Express to handle routing on the backend, as well as how to use Express together with middleware (built in, third party, and custom). 
 
-- [ ] Describe a Resource?
+- [ x ] Describe Middleware?
 
-- [ ] What can the API return to help clients know if a request was successful?
+Middleware is a function that intercepts data from otherwise synchronous code and does something, like log a timestamp to the console or authenticate the user before allowing them to receive the data they're requesting. In backend engineering, middleware is used in the middle of the request-response cycle: server receives a request, the request passes through one or more middleware functions, and only then does the server send back a response.
 
-- [ ] How can we partition our application into sub-applications?
+- [ x ] Describe a Resource?
+
+A resource is an object that has some data associated with it, and the methods of HTTP (PUT, DELETE, GET, and POST) defined on it. If we think of the HTTP methods as the verbs, then resource is the noun on which the verb/method operates.
+
+- [ x ] What can the API return to help clients know if a request was successful?
+
+The simplest way is to return a success status, such as 200 (OK) or 201 (created). API can also be programmed to send back a message, such as "user updated", or even the item that was created or otherwise acted upon.
+
+- [ x ] How can we partition our application into sub-applications?
+
+We can partition the backend of an application into subroutes, and allow each route to handle API requests that start with a certain URL. Express.Router() makes this easy.
 
 ## Minimum Viable Product
 
